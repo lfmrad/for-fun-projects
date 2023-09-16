@@ -37,10 +37,10 @@ public class GameOfLife {
     public static void main(String[] args) {
         setTheBoard();
         patternLoader(PatternLib.GOSPER_GLIDER_GUN,10,10);
-        //patternLoader(PatternLib.PULSAR,5,5);
+        // patternLoader(PatternLib.PULSAR,5,5);
         // patternLoader(PatternLib.PULSAR,0,25);
         // patternLoader(PatternLib.METAPIXEL,15,15);
-        //patternLoader(PatternLib.TEST,35,15);
+        // patternLoader(PatternLib.TEST,35,15);
         // patternLoader(PatternLib.THINGY,10,35);
         // populate();
         System.out.println("LOADING...");
