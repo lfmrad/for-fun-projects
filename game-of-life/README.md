@@ -35,7 +35,7 @@ case GOSPER_GLIDER_GUN:
 
 To experiment more generally, I added functionality that allows cells to be populated randomly as well.
 
-The game runs via the command line, and all configurations are set in the code before compilation. There are several calls to the patternLoader at the beginning that you can uncomment to try out. It set by default to launch the previous Gosper glider gun.
+The game runs via the command line, and all configurations are set in the code before compilation. There are several calls to the patternLoader at the beginning that you can uncomment to try out. It is set by default to launch the previous pattern (Gosper glider gun).
 
 ```java
 public static void main(String[] args) {
