@@ -2,18 +2,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Player {
-    private int pointsWon;
+    private int scoredPoints;
     private String alias;
-
-    private static Map<Player, Integer> playersWithId = new HashMap<>();
+    private Team team;
+    private static Map<Integer, Player> playersWithId = new HashMap<>();
     private static int idCounter = 0;
     
-    public Player(String alias) {
+    public Player(String alias, Team team) {
         this.alias = alias;
-        this.pointsWon = 0;
+        this.scoredPoints = 0;
+        playersWithId.put(idCounter++, this);
+    }
 
-        playersWithId.put(this, idCounter++);
+    public String getAlias() {
+        return alias;
+    }
 
+    public static Player getPlayerById(int id) {
+        return playersWithId.get(id);
+    }
+
+    public void scoredPoint() {
+        scoredPoints++;
+    }
+
+    public Team getTeam() {
+        return team;
     }
 }
 

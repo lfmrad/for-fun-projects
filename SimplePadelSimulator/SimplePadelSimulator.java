@@ -12,19 +12,14 @@ public class SimplePadelSimulator {
     }
 
     static private void setUpMatch() {
-        Player player1 = new Player("Alfonso");
-        Player player2 = new Player("Ramiro");
-        Player player3 = new Player("Jesús");
-        Player player4 = new Player("Antonio");
-        List<Player> teamAlphaPlayers = new ArrayList<>();
-        List<Player> teamBetaPlayers = new ArrayList<>();
-        teamAlphaPlayers.add(player1);
-        teamAlphaPlayers.add(player2);
-        teamBetaPlayers.add(player3);
-        teamBetaPlayers.add(player4);
+        Team teamAlpha = new Team("Equipo A");
+        Team teamBeta = new Team("Equipo B");
 
-        Team teamAlpha = new Team("Equipo A", teamAlphaPlayers);
-        Team teamBeta = new Team("Equipo B", teamBetaPlayers);
+        Player player1 = new Player("Alfonso", teamAlpha);
+        Player player2 = new Player("Ramiro", teamAlpha);
+        Player player3 = new Player("Jesús", teamBeta);
+        Player player4 = new Player("Antonio", teamBeta);
+
         List<Team> teamsPlaying = new ArrayList<>();
         teamsPlaying.add(teamAlpha);
         teamsPlaying.add(teamBeta);
@@ -39,6 +34,5 @@ public class SimplePadelSimulator {
         int whoScored = ThreadLocalRandom.current().nextInt(0, numberOfPlayers + 1);
 
         // Match.updateScore(scoring player random id)
-    
     }
 }
