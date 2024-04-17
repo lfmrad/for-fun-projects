@@ -15,7 +15,7 @@ CalCraft is an Android calculator app developed as part of a learning project in
 
 This is the main solver and the trickiest part that I had to develop:
 
-```java
+```kotlin
  fun computeBuffer(operationBuffer: MutableList<OperationToken>): Number? {
             var tokens: MutableList<OperationToken?> = mutableListOf()
             while (operationBuffer.isNotEmpty()) {
